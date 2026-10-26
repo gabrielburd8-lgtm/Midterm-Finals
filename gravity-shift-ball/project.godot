@@ -10,21 +10,28 @@ config_version=5
 
 [application]
 
-config/name="Gravity Shift Ball"
+config/name="Gravity Shift: Ball Escape"
+run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://scripts/Global.gd"
+
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [physics]
 
-3d/physics_engine="Jolt Physics"
+2d/default_gravity=980.0
+2d/default_gravity_vector=Vector2(0, 1)
 
 [rendering]
 
-rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

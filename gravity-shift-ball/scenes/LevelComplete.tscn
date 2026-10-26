@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/LevelComplete.gd" id="1_3f0pq"]
+
+[node name="LevelComplete" type="CanvasLayer"]
+script = ExtResource("1_3f0pq")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -140.0
+offset_right = 220.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LevelLabel" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 24.0
+offset_right = 410.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 28
+text = "Level Clear!"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 55.0
+offset_top = 110.0
+offset_right = 385.0
+offset_bottom = 250.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NextButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(260, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Next Level"
+
+[node name="MainMenuButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(260, 42)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Main Menu"
